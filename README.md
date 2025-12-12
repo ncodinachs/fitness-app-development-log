@@ -60,6 +60,11 @@ See [`ROADMAP.md`](ROADMAP.md)
 
 ---
 
+## 📓 Development log
+Ongoing development notes can be found in [`docs/development-log.md`](docs/development-log.md)
+
+---
+
 ## 📌 Final note
 This repository does **not** contain source code.
 It documents real architectural decisions, product evolution
