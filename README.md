@@ -1,4 +1,4 @@
-# Fitness App – Development Log (Private Source)
+# Fitness App – Development Log
 
 This repository documents the design and development process of a fitness
 application built with Flutter.
