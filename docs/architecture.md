@@ -1,5 +1,9 @@
 # Application architecture
 
+## High-level diagram
+
+![High-level architecture diagram](architecture_diagram.png)
+
 ## High-level structure
 - Models: pure data representations
 - Screens: UI and user interaction
