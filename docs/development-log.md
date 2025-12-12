@@ -361,4 +361,105 @@ Visualization can only be correct if the data underneath is correct.
 - Add progress visualizations
 - Prepare diet-related DEMO scenarios
 
+---
+
+## Week 5 – Review tab & progress visualization
+
+### Goal
+Design a dedicated space for tracking physical progress over time,
+separate from daily actions like workouts and diet entries.
+
+The Review tab was conceived as the place where progress becomes visible.
+
+---
+
+### Context
+Profile information tends to be static, while progress data is:
+- Time-based
+- Accumulative
+- Emotionally meaningful
+
+Mixing both leads to clutter and unclear user mental models.
+This motivated the creation of a dedicated **Review** tab.
+
+---
+
+### Key decisions
+
+#### 1. Review as a first-class feature
+Progress tracking was not treated as a secondary feature.
+The Review tab was designed to centralize:
+- Weight evolution
+- Visual progress (photos)
+- Historical context
+
+This helps users reflect, not just record data.
+
+---
+
+#### 2. Monthly granularity for visual progress
+Photos were scoped to a **monthly cadence**:
+- Front
+- Back
+- Side
+
+This avoids:
+- Obsessive daily comparison
+- Data overload
+- Storage complexity
+
+Monthly checkpoints create a healthier and more meaningful progress narrative.
+
+---
+
+#### 3. Simple charts before advanced analytics
+Instead of complex metrics, the first visualizations focus on:
+- Weight over time
+- Clear trend direction
+
+Advanced analytics can be layered later once data quality is proven.
+
+---
+
+#### 4. Explicit separation from Profile
+The Profile tab remains focused on:
+- Identity
+- Static user data
+
+The Review tab owns:
+- Change
+- History
+- Progress
+
+This separation reduces cognitive load and keeps each tab purpose-driven.
+
+---
+
+### Challenges encountered
+- Defining the right time granularity for progress
+- Keeping visualizations simple but informative
+- Aligning progress data with persisted state
+
+---
+
+### Lessons learned
+- Progress visibility is a strong motivator
+- Fewer metrics, clearly presented, are more effective
+- Users value reflection as much as action
+
+---
+
+### Current status
+- Review tab structure defined
+- Weight tracking integrated
+- Monthly photo concept validated
+- Ready for DEMO-level visualization
+
+---
+
+### Next steps
+- Polish charts and interactions
+- Ensure progress data consistency across app restarts
+- Finalize DEMO user journeys
+
 
