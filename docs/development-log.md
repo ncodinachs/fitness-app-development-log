@@ -264,3 +264,101 @@ The goal was to:
 - Refine Diet UX (speed and clarity)
 - Connect Review metrics with persisted data
 - Start defining DEMO scenarios and user journeys
+
+---
+
+## Week 4 – Diet UX & data modeling
+
+### Goal
+Design a diet tracking experience that is fast, reliable and realistic
+for daily use, while keeping the underlying data model consistent
+and extensible.
+
+The focus was on reducing friction and avoiding over-complexity.
+
+---
+
+### Context
+Diet tracking can easily become:
+- Too detailed and slow
+- Too generic and useless
+
+The challenge was to find a balance between:
+- Usability during a busy day
+- Data quality for future insights
+
+---
+
+### Key decisions
+
+#### 1. Food-first, not macro-first
+Instead of forcing users to enter macros manually, the flow was designed as:
+1. Search or select a food item
+2. Define quantity
+3. Automatically associate nutritional values
+
+This keeps the experience intuitive and closer to how people think about food.
+
+---
+
+#### 2. One action = one saved entry
+Each food addition is treated as a complete, independent action.
+This avoids:
+- Half-saved meals
+- Complex multi-step confirmations
+- Confusing “draft” states
+
+Simplicity was prioritized over advanced meal grouping.
+
+---
+
+#### 3. Daily scope as a natural boundary
+Diet data is naturally time-based.
+Entries were modeled around:
+- A specific day
+- A list of food entries
+
+This makes it easier to:
+- Review daily intake
+- Aggregate weekly trends later
+- Reset mental context each day
+
+---
+
+#### 4. Data consistency over visual complexity
+Before adding charts or summaries, the focus was on:
+- Ensuring quantities behave correctly
+- Avoiding duplicated entries
+- Keeping the model predictable
+
+Visualization can only be correct if the data underneath is correct.
+
+---
+
+### Challenges encountered
+- Handling quantity changes without duplicating data
+- Maintaining consistency when switching tabs
+- Preventing partial or accidental entries
+
+---
+
+### Lessons learned
+- Diet UX must be fast, or it will not be used
+- Users think in foods, not numbers
+- A simple, consistent model enables future analytics
+
+---
+
+### Current status
+- Core diet flow implemented and stable
+- Food-based tracking validated
+- Data model ready for summaries and charts
+
+---
+
+### Next steps
+- Connect diet data to the Review tab
+- Add progress visualizations
+- Prepare diet-related DEMO scenarios
+
+
