@@ -174,3 +174,93 @@ So history was treated as a core module, not an afterthought.
 - Review tab: connect progress metrics to workout/diet outcomes
 - Prepare the DEMO experience (mock data + polished navigation)
 
+---
+
+## Week 3 – State persistence & cross-tab consistency
+
+### Goal
+Ensure that user data remains consistent and available when navigating
+between tabs, avoiding data loss and unexpected resets during normal usage.
+
+This week focused less on new features and more on **stability and correctness**.
+
+---
+
+### Context
+The app uses a tab-based navigation system.
+Early on, switching tabs caused temporary state to reset in certain scenarios,
+especially for:
+- Diet entries
+- Workout session progress
+- Form-based inputs
+
+These issues often remain hidden in early prototypes but become critical
+once the app is used continuously.
+
+---
+
+### Key decisions
+
+#### 1. Identify what *must* persist
+Not all state is equal. A clear distinction was made between:
+- **Ephemeral UI state** (scroll position, temporary selections)
+- **User-critical state** (entered food, session progress, profile changes)
+
+Only user-critical state was prioritized for persistence.
+
+---
+
+#### 2. Persistence before polish
+Instead of refining UX immediately, effort was shifted to:
+- Making sure data survives tab navigation
+- Avoiding silent data loss
+- Ensuring predictable behavior
+
+Polish can be added later; lost data destroys trust.
+
+---
+
+#### 3. Explicit ownership of state
+Each functional area became responsible for:
+- Creating its own state
+- Updating it intentionally
+- Persisting it when needed
+
+Implicit or shared state between tabs was avoided.
+
+---
+
+#### 4. Delayed backend integration
+Although backend integration was considered, it was intentionally postponed.
+The goal was to:
+- Validate flows locally
+- Keep iteration fast
+- Avoid coupling UX decisions to API constraints too early
+
+---
+
+### Challenges encountered
+- Understanding when Flutter rebuilds widgets
+- Avoiding accidental state recreation
+- Deciding persistence boundaries without overengineering
+
+---
+
+### Lessons learned
+- State bugs are product bugs, not just technical ones
+- Users forgive missing features, not missing data
+- Solving persistence early simplifies everything that follows
+
+---
+
+### Current status
+- Cross-tab data consistency stabilized
+- Diet and workout inputs no longer reset unexpectedly
+- App behavior is predictable during long sessions
+
+---
+
+### Next steps
+- Refine Diet UX (speed and clarity)
+- Connect Review metrics with persisted data
+- Start defining DEMO scenarios and user journeys
